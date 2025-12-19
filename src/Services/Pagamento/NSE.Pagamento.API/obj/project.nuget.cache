@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "R9Juz+ZDdRU=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\reinan.neto\\Desktop\\Reinan\\Github\\NerdStoreEnterprise\\src\\Services\\Pagamento\\NSE.Pagamento.API\\NSE.Pagamento.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\reinan.neto\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.0\\microsoft.aspnetcore.openapi.10.0.0.nupkg.sha512",
+    "C:\\Users\\reinan.neto\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512",
+    "C:\\Users\\reinan.neto\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.23.0\\microsoft.visualstudio.azure.containers.tools.targets.1.23.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,27 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/Building Blocks/" />
+  <Folder Name="/src/Building Blocks/Core/">
+    <Project Path="src/Building Blocks/Core/NSE.Core/NSE.Core.csproj" />
+  </Folder>
+  <Folder Name="/src/Services/" />
+  <Folder Name="/src/Services/Carrinho/">
+    <Project Path="src/Services/Carrinho/NSE.Carrinho.API/NSE.Carrinho.API.csproj" Id="e4137022-6674-49c8-b88d-4f698501e098" />
+  </Folder>
+  <Folder Name="/src/Services/Catalogo/">
+    <Project Path="src/Services/Catalogo/NSE.Catalogo.API/NSE.Catalogo.API.csproj" Id="42941d1b-3bef-4bb1-ab14-1cde9d93a4a1" />
+  </Folder>
+  <Folder Name="/src/Services/Cliente/">
+    <Project Path="src/Services/Cliente/NSE.Cliente.API/NSE.Cliente.API.csproj" Id="f65f0800-326f-4870-8be1-08a06af54173" />
+  </Folder>
+  <Folder Name="/src/Services/Identidade/">
+    <Project Path="src/Services/Identidade/NSE.Identidade.API/NSE.Identidade.API.csproj" />
+  </Folder>
+  <Folder Name="/src/Services/Pagamento/">
+    <Project Path="src/Services/Pagamento/NSE.Pagamento.API/NSE.Pagamento.API.csproj" Id="1622bf23-1c55-4af3-b06a-5be75acb4b04" />
+  </Folder>
+  <Folder Name="/src/Services/Pedido/">
+    <Project Path="src/Services/Pedido/NSE.Pedido.API/NSE.Pedido.API.csproj" Id="f3bb19ac-e87c-4370-b293-5ca26d3643a5" />
+  </Folder>
+  <Folder Name="/src/Web/" />
+</Solution>
