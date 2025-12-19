@@ -1,0 +1,144 @@
+########################################################
+# Visual Studio / .NET
+########################################################
+
+## Build results
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa]ny CPU/
+[Ll]og/
+
+## Rider / VS cache
+.vs/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Visual Studio Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+########################################################
+# .NET Core / ASP.NET
+########################################################
+
+## ASP.NET Core
+appsettings.Development.json
+appsettings.Local.json
+appsettings.*.json
+!appsettings.json
+
+## User Secrets
+secrets.json
+
+## HTTPS certificates
+*.pfx
+*.cer
+
+## Dotnet CLI
+.dotnet/
+*.dotnet
+
+########################################################
+# Entity Framework
+########################################################
+
+## EF Core Migrations
+Migrations/*.Designer.cs
+Migrations/*.resx
+
+## EF Core temporary files
+*.mdf
+*.ldf
+
+########################################################
+# Logs & diagnostics
+########################################################
+
+*.log
+*.trace
+*.tmp
+*.temp
+
+########################################################
+# OS generated files
+########################################################
+
+## Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+## macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+########################################################
+# Docker
+########################################################
+
+docker-compose.override.yml
+*.dockerfile
+
+########################################################
+# Azure / Cloud
+########################################################
+
+*.publishsettings
+*.azurePubxml
+*.pubxml.user
+PublishProfiles/
+
+########################################################
+# Test results
+########################################################
+
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+########################################################
+# Node / Frontend (Blazor WASM, SPA)
+########################################################
+
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+########################################################
+# Packages
+########################################################
+
+## NuGet
+packages/
+*.nupkg
+*.snupkg
+
+########################################################
+# Secrets & env
+########################################################
+
+.env
+.env.*
+!.env.example
+
+########################################################
+# Misc
+########################################################
+
+*.bak
+*.old
+*.orig
