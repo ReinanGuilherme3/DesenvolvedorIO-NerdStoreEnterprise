@@ -171,23 +171,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\reinan.neto\\.nuget\\packages\\": {},
+    "C:\\Users\\Reinan Guilherme\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\reinan.neto\\Desktop\\Reinan\\Github\\NerdStoreEnterprise\\src\\Services\\Catalogo\\NSE.Catalogo.API\\NSE.Catalogo.API.csproj",
+      "projectUniqueName": "C:\\Users\\Reinan Guilherme\\source\\repos\\DesenvolvedorIO-NerdStoreEnterprise\\src\\Services\\Catalogo\\NSE.Catalogo.API\\NSE.Catalogo.API.csproj",
       "projectName": "NSE.Catalogo.API",
-      "projectPath": "C:\\Users\\reinan.neto\\Desktop\\Reinan\\Github\\NerdStoreEnterprise\\src\\Services\\Catalogo\\NSE.Catalogo.API\\NSE.Catalogo.API.csproj",
-      "packagesPath": "C:\\Users\\reinan.neto\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\reinan.neto\\Desktop\\Reinan\\Github\\NerdStoreEnterprise\\src\\Services\\Catalogo\\NSE.Catalogo.API\\obj\\",
+      "projectPath": "C:\\Users\\Reinan Guilherme\\source\\repos\\DesenvolvedorIO-NerdStoreEnterprise\\src\\Services\\Catalogo\\NSE.Catalogo.API\\NSE.Catalogo.API.csproj",
+      "packagesPath": "C:\\Users\\Reinan Guilherme\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Reinan Guilherme\\source\\repos\\DesenvolvedorIO-NerdStoreEnterprise\\src\\Services\\Catalogo\\NSE.Catalogo.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\reinan.neto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Reinan Guilherme\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -249,7 +249,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
