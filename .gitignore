@@ -12,6 +12,9 @@ x86/
 [Aa]ny CPU/
 [Ll]og/
 
+**/bin/
+**/obj/
+
 ## Rider / VS cache
 .vs/
 .idea/
