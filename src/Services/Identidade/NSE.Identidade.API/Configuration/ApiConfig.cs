@@ -1,4 +1,5 @@
-﻿using Scalar.AspNetCore;
+﻿using NSE.WebApi.Core.Identidade;
+using Scalar.AspNetCore;
 
 namespace NSE.Identidade.API.Configuration;
 
@@ -20,7 +21,7 @@ public static class ApiConfig
 
         app.UseHttpsRedirection();
 
-        app.UseIdentityConfiguration();
+        app.UseJwtConfiguration();
 
         app.MapControllers();
 

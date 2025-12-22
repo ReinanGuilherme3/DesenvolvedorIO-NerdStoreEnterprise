@@ -4,6 +4,9 @@
   <Folder Name="/src/Building Blocks/Core/">
     <Project Path="src/Building Blocks/Core/NSE.Core/NSE.Core.csproj" />
   </Folder>
+  <Folder Name="/src/Building Blocks/Services/">
+    <Project Path="src/Building Blocks/Services/NSE.WebApi.Core/NSE.WebApi.Core.csproj" Id="3b73f5d0-6960-40ef-a1da-8ae8dbb4c2ec" />
+  </Folder>
   <Folder Name="/src/Services/" />
   <Folder Name="/src/Services/Carrinho/">
     <Project Path="src/Services/Carrinho/NSE.Carrinho.API/NSE.Carrinho.API.csproj" Id="e4137022-6674-49c8-b88d-4f698501e098" />
