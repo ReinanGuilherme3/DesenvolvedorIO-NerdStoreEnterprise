@@ -12,7 +12,7 @@ public abstract class MainController : ControllerBase
     protected IActionResult CustomResponse(object? result = null)
     {
         if (OperacaoValida())
-            return Ok();
+            return Ok(result);
 
 
         return BadRequest(new ValidationProblemDetails(new Dictionary<string, string[]>
