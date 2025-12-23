@@ -1,9 +1,24 @@
-﻿namespace NSE.Cliente.API.Application.Commands;
+﻿using FluentValidation.Results;
+using MediatR;
+using NSE.Core.Messages;
 
-public class ClienteCommandHandler
+namespace NSE.Cliente.API.Application.Commands;
+
+public class ClienteCommandHandler : CommandHandler,
+    IRequestHandler<RegistrarClienteCommand, ValidationResult>
 {
-    public void Manipular(RegistrarClienteCommand command)
+    public async Task<ValidationResult> Handle(RegistrarClienteCommand message, CancellationToken cancellationToken)
     {
-        // Lógica para manipular o comando de registrar cliente
+        if (!message.EhValido()) return message.ValidationResult;
+
+        var cliente = new Models.Cliente(message.Id, message.Nome, message.Email, message.Cpf);
+
+        if (true)
+        {
+            AdicionarErro("Já existe um cliente com este CPF informado.");
+            return ValidationResult;
+        }
+
+        return message.ValidationResult;
     }
 }

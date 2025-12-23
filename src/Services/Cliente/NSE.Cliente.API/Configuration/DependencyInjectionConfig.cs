@@ -1,4 +1,8 @@
-﻿using NSE.Cliente.API.Data;
+﻿using FluentValidation.Results;
+using MediatR;
+using NSE.Cliente.API.Application.Commands;
+using NSE.Cliente.API.Data;
+using NSE.Core.Mediator;
 
 namespace NSE.Cliente.API.Configuration;
 
@@ -6,8 +10,9 @@ public static class DependencyInjectionConfig
 {
     public static void AddDependencyInjectionConfig(this IServiceCollection services)
     {
-        // Repository
-        //services.AddScoped<IProdutoRepository, ProdutoRepository>();
+        services.AddScoped<IMediatorHandler, MediatorHandler>();
+        services.AddScoped<IRequestHandler<RegistrarClienteCommand, ValidationResult>, ClienteCommandHandler>();
+
         services.AddScoped<ClientesContext>();
     }
 }
