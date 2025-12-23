@@ -1,14 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using NSE.Catalogo.API.Data;
+using NSE.Cliente.API.Data;
 using NSE.WebApi.Core.Identidade;
 
-namespace NSE.Catalogo.API.Configuration;
+namespace NSE.Cliente.API.Configuration;
 
 public static class ApiConfig
 {
     public static void AddApiConfiguration(this IServiceCollection services, IConfiguration configuration)
     {
-        services.AddDbContext<CatalogoContext>(options =>
+        services.AddDbContext<ClientesContext>(options =>
             options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
         services.AddControllers();
@@ -19,9 +19,9 @@ public static class ApiConfig
             {
                 document.Info = new()
                 {
-                    Title = "Catalogo API",
+                    Title = "Cliente API",
                     Version = "1.0.0",
-                    Description = "Catalogo API"
+                    Description = "Cliente API"
                 };
                 document.Info.Contact = new()
                 {
