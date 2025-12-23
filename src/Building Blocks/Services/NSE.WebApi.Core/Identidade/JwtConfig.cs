@@ -33,7 +33,9 @@ public static class JwtConfig
                 ValidateIssuer = true,
                 ValidateAudience = true,
                 ValidAudience = appSettings.ValidoEm,
-                ValidIssuer = appSettings.Emissor
+                ValidIssuer = appSettings.Emissor,
+                ValidateLifetime = true,
+                ClockSkew = TimeSpan.Zero
             };
         });
     }
