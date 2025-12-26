@@ -12,7 +12,7 @@ public abstract class Entity
     }
 
     private List<Event> _notificacoes;
-    public IReadOnlyCollection<Event> Notifications => _notificacoes?.AsReadOnly();
+    public IReadOnlyCollection<Event> Notificacoes => _notificacoes?.AsReadOnly();
 
     public void AdicionarEvento(Event evento)
     {

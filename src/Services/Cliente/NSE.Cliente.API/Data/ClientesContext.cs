@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NSE.Cliente.API.Models;
 using NSE.Core.Data;
+using NSE.Core.DomainObjects;
 using NSE.Core.Mediator;
 
 namespace NSE.Cliente.API.Data;
@@ -48,7 +49,28 @@ public sealed class ClientesContext : DbContext, IUnitOfWork
     {
         var sucesso = await base.SaveChangesAsync() > 0;
 
+        if (sucesso) await _mediatorHandler.PublicarEventos(this);
 
-        return
+        return sucesso;
+    }
+}
+
+public static class MediatorExtension
+{
+    public static async Task PublicarEventos<T>(this IMediatorHandler mediator, T context) where T : DbContext
+    {
+        var domainEntities = context.ChangeTracker
+            .Entries<Entity>()
+            .Where(x => x.Entity.Notificacoes.Any());
+
+        var domainEvents = domainEntities
+            .SelectMany(x => x.Entity.Notificacoes)
+            .ToList();
+
+        domainEntities.ToList()
+            .ForEach(entity => entity.Entity.LimparEventos());
+
+        foreach (var domainEvent in domainEvents)
+            await mediator.PublicarEvento(domainEvent);
     }
 }
