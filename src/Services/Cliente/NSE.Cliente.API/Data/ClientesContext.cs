@@ -1,16 +1,22 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NSE.Cliente.API.Models;
 using NSE.Core.Data;
+using NSE.Core.Mediator;
 
 namespace NSE.Cliente.API.Data;
 
 public sealed class ClientesContext : DbContext, IUnitOfWork
 {
-    public ClientesContext(DbContextOptions<ClientesContext> options)
+    private readonly IMediatorHandler _mediatorHandler;
+
+    public ClientesContext(
+        DbContextOptions<ClientesContext> options,
+        IMediatorHandler mediatorHandler)
         : base(options)
     {
         ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
         ChangeTracker.AutoDetectChangesEnabled = false;
+        _mediatorHandler = mediatorHandler;
     }
 
     public DbSet<Models.Cliente> Clientes { get; set; }
@@ -40,6 +46,9 @@ public sealed class ClientesContext : DbContext, IUnitOfWork
 
     public async Task<bool> Commit()
     {
-        return await base.SaveChangesAsync() > 0;
+        var sucesso = await base.SaveChangesAsync() > 0;
+
+
+        return
     }
 }

@@ -1,5 +1,6 @@
 ﻿using FluentValidation.Results;
 using MediatR;
+using NSE.Cliente.API.Application.Events;
 using NSE.Cliente.API.Models;
 using NSE.Core.Messages;
 
@@ -34,6 +35,8 @@ public class ClienteCommandHandler : CommandHandler,
 
         if (!await _clienteRepository.UnitOfWork.Commit())
             AdicionarErro("Houve um erro ao persistir os dados");
+
+        cliente.AdicionarEvento(new ClienteRegistradoEvent(message.Id, message.Nome, message.Email, message.Cpf));
 
         return await PersistirDados(_clienteRepository.UnitOfWork);
     }
