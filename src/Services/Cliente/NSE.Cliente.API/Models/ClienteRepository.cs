@@ -15,9 +15,9 @@ public class ClienteRepository : IClienteRepository
 
     public IUnitOfWork UnitOfWork => _context;
 
-    public void Adicionar(Cliente cliente)
+    public async Task Adicionar(Cliente cliente)
     {
-        _context.Clientes.Add(cliente);
+        await _context.Clientes.AddAsync(cliente);
     }
 
     public async Task<Cliente?> ObterPorCpf(string cpf)

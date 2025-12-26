@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace NSE.Identidade.API.Controllers;
+namespace NSE.WebApi.Core.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]

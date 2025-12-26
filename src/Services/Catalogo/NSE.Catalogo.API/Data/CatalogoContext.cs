@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NSE.Catalogo.API.Models;
 using NSE.Core.Data;
+using NSE.Core.Messages;
+using System.ComponentModel.DataAnnotations;
 
 namespace NSE.Catalogo.API.Data;
 
@@ -12,6 +14,8 @@ public class CatalogoContext : DbContext, IUnitOfWork
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Ignore<ValidationResult>();
+        modelBuilder.Ignore<Event>();
 
         foreach (var property in modelBuilder.Model.GetEntityTypes()
                      .SelectMany(e => e.GetProperties()
