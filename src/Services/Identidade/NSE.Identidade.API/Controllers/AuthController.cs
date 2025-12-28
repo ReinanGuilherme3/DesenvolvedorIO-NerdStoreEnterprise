@@ -24,13 +24,11 @@ public class AuthController : MainController
     public AuthController(
         UserManager<IdentityUser> userManager,
         SignInManager<IdentityUser> signInManager,
-        IOptions<AppSettings> appSettings,
-        IBus bus)
+        IOptions<AppSettings> appSettings)
     {
         _userManager = userManager;
         _signInManager = signInManager;
         _appSettings = appSettings.Value;
-        _bus = bus;
     }
 
     [HttpPost("nova-conta")]
@@ -67,9 +65,9 @@ public class AuthController : MainController
         var usuario = await _userManager.FindByEmailAsync(usuarioRegistro.Email);
 
         var usuarioRegistrado = new UsuarioRegistradoIntegrationEvent(
-            Guid.Parse(usuario.Id), usuario.Email, usuarioRegistro.Nome, usuarioRegistro.Cpf);
+            Guid.Parse(usuario.Id), usuarioRegistro.Nome, usuario.Email, usuarioRegistro.Cpf);
 
-        _bus = RabbitHutch.CreateBus("host=localhost:5672");
+        _bus = RabbitHutch.CreateBus("host=localhost:5672;virtualHost=/;username=guest;password=guest");
 
         var sucesso = await _bus.Rpc.RequestAsync<UsuarioRegistradoIntegrationEvent, ResponseMessage>(usuarioRegistrado);
 

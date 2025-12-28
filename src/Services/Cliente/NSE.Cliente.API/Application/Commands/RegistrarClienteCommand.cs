@@ -38,7 +38,7 @@ public class RegistrarClienteValidation : AbstractValidator<RegistrarClienteComm
             .Length(2, 150).WithMessage("O nome do cliente deve ter entre 2 e 150 caracteres");
 
         RuleFor(c => c.Email)
-            .EmailAddress().WithMessage("O email do cliente é inválido");
+            .NotEmpty().WithMessage("O email deve ser informado");
 
         RuleFor(c => c.Cpf)
             .Must(TerCpfValido).WithMessage("O CPF do cliente é inválido");

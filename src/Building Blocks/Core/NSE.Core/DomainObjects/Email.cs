@@ -22,7 +22,10 @@ public class Email
 
     public static bool Validar(string email)
     {
-        var regexEmail = new Regex(@"^(.+)@(.+)$", RegexOptions.IgnoreCase);
+        var regexEmail = new Regex(
+            @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$",
+            RegexOptions.IgnoreCase
+        );
 
         return regexEmail.IsMatch(email);
     }
