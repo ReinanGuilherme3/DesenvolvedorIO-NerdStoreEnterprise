@@ -4,6 +4,9 @@
   <Folder Name="/src/Building Blocks/Core/">
     <Project Path="src/Building Blocks/Core/NSE.Core/NSE.Core.csproj" />
   </Folder>
+  <Folder Name="/src/Building Blocks/MessageBus/">
+    <Project Path="src/Building Blocks/MessageBus/NSE.MessageBus/NSE.MessageBus.csproj" Id="d1c2e159-19de-4b84-b2c1-90813fb97213" />
+  </Folder>
   <Folder Name="/src/Building Blocks/Services/">
     <Project Path="src/Building Blocks/Services/NSE.WebApi.Core/NSE.WebApi.Core.csproj" Id="3b73f5d0-6960-40ef-a1da-8ae8dbb4c2ec" />
   </Folder>
