@@ -89,22 +89,11 @@ public sealed class MessageBus : IMessageBus
         return await Rpc.RequestAsync<TRequest, TResponse>(request, cancellationToken);
     }
 
-    public async Task RespondAsync<TRequest, TResponse>(
-        Func<TRequest, CancellationToken, Task<TResponse>> responder,
-        CancellationToken cancellationToken = default)
-        where TRequest : IntegrationEvent
-        where TResponse : ResponseMessage
+    public IDisposable RespondAsync<TRequest, TResponse>(Func<TRequest, Task<TResponse>> responder)
+            where TRequest : IntegrationEvent where TResponse : ResponseMessage
     {
         EnsureStarted();
-
-        await Rpc.RespondAsync(
-            responder,
-            cfg =>
-            {
-                cfg.WithPrefetchCount(1);
-            },
-            cancellationToken
-        );
+        return Rpc.RespondAsync(responder);
     }
 
     // ---------------- Dispose ----------------
