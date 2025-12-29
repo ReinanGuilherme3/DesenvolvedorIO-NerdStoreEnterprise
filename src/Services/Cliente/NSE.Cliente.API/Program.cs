@@ -8,6 +8,7 @@ builder.Services.AddJwtConfiguration(builder.Configuration);
 builder.Services.AddDependencyInjectionConfig();
 builder.Services.AddMediatR(cfg =>
     cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));
+builder.Services.AddMessageBusConfiguration(builder.Configuration);
 
 var app = builder.Build();
 
